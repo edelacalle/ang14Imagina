@@ -1,0 +1,23 @@
+<h1>Servicio Loteria</h1>
+
+<table width="100%" border="1">
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let item of loto.participantes">
+      <td>{{item.id}}</td>
+      <td>{{item.nombre}}</td>
+      <td>{{item.ganados}}</td>
+    </tr>
+  </tbody>
+  <tfoot></tfoot>
+</table>
+
+
+<input [(ngModel)]="auxPersona" type="text" >
+<button (click)="envia()">Envia</button>
+
+<hr/>
+  {{auxPersona}}
+<hr/>
+
+<button (click)="loto.juego()">Jugar</button>

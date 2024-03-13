@@ -1,0 +1,60 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Orig</th>
+            <th>expr</th>
+            <th>Pipeado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>date</td>
+            <td>{{fecha}}</td>
+            <td>fecha  | date</td>
+            <td>{{fecha  | date }}</td>
+        </tr>
+        <tr>
+            <td>uppercase</td>
+            <td>{{cadena}}</td>
+            <td>cadena  | uppercase</td>
+            <td>{{cadena  | uppercase }}</td>
+        </tr>
+        <tr>
+            <td>lowercase</td>
+            <td>{{cadena}}</td>
+            <td>cadena  | lowercase</td>
+            <td>{{cadena  | lowercase }}</td>
+        </tr>
+        <tr>
+            <td>titlecase</td>
+            <td>{{cadena}}</td>
+            <td>cadena  | titlecase</td>
+            <td>{{cadena  | titlecase }}</td>
+        </tr>
+        <tr>
+            <td>currency</td>
+            <td>{{numero}}</td>
+            <td>numero  | currency</td>
+            <td>{{numero | currency }}</td>
+        </tr>
+        <tr>
+            <td>tres decimales </td>
+            <td>{{numero}}</td>
+            <td>numero  | number:'1.3-3' </td>
+            <td>{{numero | number:'1.3-3' }}</td>
+        </tr>
+        <tr>
+            <td>porcentaje tres decimales </td>
+            <td>{{numero}}</td>
+            <td>numero  | percent:'1.3-3' </td>
+            <td>{{numero | percent:'1.3-3' }}</td>
+        </tr>
+        <tr>
+            <td>numero elevado</td>
+            <td>{{numero}}</td>
+            <td>numero  | elevado:2 </td>
+            <td>{{numero }}</td>
+        </tr>
+    </tbody>
+</table>

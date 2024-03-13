@@ -1,0 +1,44 @@
+
+<mat-grid-list cols="1" rows="1" rowHeight="2:1">
+  
+  <mat-grid-tile>
+      <mat-card>
+        <mat-card-header>
+          Acceso al sistema
+        </mat-card-header>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" id="email" formControlName="email">  
+            </mat-form-field>
+      
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+              <div *ngIf="loginForm.get('email')?.errors?.['required']">Email es requerido.</div>
+              <div *ngIf="loginForm.get('email')?.errors?.['email']">invalido formato email.</div>
+            </div>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" id="password" formControlName="password">  
+            </mat-form-field>
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+              <div *ngIf="loginForm.get('password')?.errors?.['required']">Password es requerida .</div>
+            </div>
+          </div>
+      
+          <button mat-raised-button color="primary"  type="submit" [disabled]="loginForm.invalid">Login</button>
+      
+      </form>
+      
+      
+      </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
+
+
+
+
