@@ -1,6 +1,5 @@
-//import { NgModule } from '@angular/core';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+//import { CommonModule } from '@angular/common';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +12,9 @@ import { MatGridListModule} from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 
+
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 import { LayoutModule } from '@angular/cdk/layout';
 
 
@@ -21,7 +23,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+  //  CommonModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -34,7 +36,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatCardModule,
   ],
   exports:[
-    CommonModule,
+    //CommonModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -44,12 +46,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatInputModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressBarModule
 
-  ],
-  schemas:[
-     CUSTOM_ELEMENTS_SCHEMA 
   ]
-  
 })
 export class MaterialModule { }

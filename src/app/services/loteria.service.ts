@@ -7,7 +7,7 @@ export class LoteriaService {
   participantes=[
     {id:1, nombre:"Usuario 1", ganados:0},
     {id:2, nombre:"Usuario 2", ganados:1  },
-  //  {id:3, nombre:"Usuario 3", ganados:4  },
+    {id:3, nombre:"Usuario 3", ganados:4  },
     {id:4, nombre:"Usuario 4", ganados:5  }
   ]
 

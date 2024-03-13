@@ -1,11 +1,11 @@
-<h1>Servicio Loteria</h1>
+<h1>Servicio Loteria Memoria</h1>
 
 <table width="100%" border="1">
   <thead></thead>
   <tbody>
     <tr *ngFor="let item of loto.participantes">
       <td>{{item.id}}</td>
-      <td>{{item.nombre}}</td>
+      <td>{{item.nombre | uppercase }}</td>
       <td>{{item.ganados}}</td>
     </tr>
   </tbody>

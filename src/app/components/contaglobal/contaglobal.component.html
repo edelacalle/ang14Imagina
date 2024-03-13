@@ -1,0 +1,18 @@
+
+  <button mat-icon-button (click)="increment()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" (click)="decrement()">
+    <mat-icon>remove</mat-icon>
+  </button>
+  <button mat-icon-button color="accent" (click)="reset()">
+    <mat-icon>refresh</mat-icon>
+  </button>
+
+  <div>Contador Actual: {{ count$ | async }}</div>
+
+  <br/>
+  <hr/>
+<mat-progress-bar mode="determinate" value="{{count$ | async }}"></mat-progress-bar>
+
+<hr/>

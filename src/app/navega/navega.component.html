@@ -3,16 +3,20 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>14_proyecto_v3</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#" routerLink="login"    routerLinkActive="active-link"  >Login</a>
       <a mat-list-item href="#" routerLink="signup"   routerLinkActive="active-link" >Signup</a>
       <a mat-list-item href="#" routerLink="loteria"  routerLinkActive="active-link">Loteria</a>
       <a mat-list-item href="#" routerLink="pipes"    routerLinkActive="active-link">Pipes</a>
+      <a mat-list-item href="#" routerLink="store"    routerLinkActive="active-link">Store</a>
+      <a mat-list-item href="#" routerLink="contador" routerLinkActive="active-link">Contador</a>
 
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
+    
     <mat-toolbar color="primary">
       <button
         type="button"
@@ -22,9 +26,13 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>08_routing_ma</span>
+      <div style="text-align: right;">{{user$ |async }}</div>
+      
     </mat-toolbar>
+      
     <!-- Add Content Here -->
+
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
